@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script>
+    
+            
+            
+        
+        function validate(){
+            let d1=document.frm.pwd.value;
+            let d2=d1.length;
+            if(d2<8)
+            {
+              alert("Password should not exceed 8 digits");
+              return false;
+            }
+         
+            let p1=document.frm.usr.value;
+            let p2=p1.length;
+    
+            if(p2>8)
+            {
+                alert("User name not be either gaterthan 8");
+                return false;
+            }
+        }
+           
+        
+        
+    </script>
+</head>
+<body>
+    <center>
+    <form name="frm" method="post" action="open.html" onSubmit="return validate()">
+    <h1>Login Page</h1>
+    <table>
+        <tr><td><label for="usr">User Name</label></td><td><input type="text" name="usr" id="usr" required></td></tr>
+        <tr><td><label for="pwd">Password</label></td> <td><input type="password" name="pwd" id="pwd" ></td></tr>
+        <tr><td><label for="email">Email</label></td><td><input type="email" name="mailID" id="email "></td></tr>
+    </table>
+    <input type="submit" value="submit">
+    </form>
+</center>
+</body>
+</html>
